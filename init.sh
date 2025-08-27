@@ -14,4 +14,4 @@ if [ ! -z "$KALI_PUBKEY" ]; then
 fi
 
 # Démarrer le serveur SSH
-exec /usr/sbin/sshd -D
+exec /usr/sbin/sshd -D -e
