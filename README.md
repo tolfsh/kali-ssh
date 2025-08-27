@@ -5,7 +5,7 @@ This repo aims to create a [Kali Linux](https://www.kali.org/docs/containers/off
 ## Run
 Generate a SSH ket and run the container :
 ```bash
-ssh-keygen -N "" -q ./kali
+ssh-keygen -N "" -q -f ./kali
 docker run --name kali -it -e KALI_PUBKEY=$(cat ./kali.pub) tolfsh/kali-ssh
 ```
 Or use a password (or both):
