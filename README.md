@@ -3,7 +3,7 @@
 This repo aims to create a [Kali Linux](https://www.kali.org/docs/containers/official-kalilinux-docker-images/) docker image with a SSH server embedded. 
 
 ## Run
-Generate a SSH ket and run the container :
+Generate a SSH key and run the container :
 ```bash
 ssh-keygen -N "" -q -f ./kali
 docker run --name kali -it -e KALI_PUBKEY=$(cat ./kali.pub) tolfsh/kali-ssh
