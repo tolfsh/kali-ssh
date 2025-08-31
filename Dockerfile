@@ -1,7 +1,7 @@
 FROM kalilinux/kali-rolling
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends openssh-server sudo && \
+    apt-get install -y --no-install-recommends openssh-server sudo nmap iproute2 bind9-host && \
     useradd --create-home --shell /bin/bash kali && \
     echo "kali ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/kali && \
     sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/' /etc/ssh/sshd_config && \
